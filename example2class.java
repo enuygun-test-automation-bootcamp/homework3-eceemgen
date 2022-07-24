@@ -18,8 +18,7 @@ import java.util.stream.Collectors;
             users.add(new User(6,"Levent"));
             users.add(new User(7,"Elvan"));
 
-            //users.stream().forEach(user -> user.talk());
-            users.stream().forEach(User::talk);//method reference
+            users.stream().forEach(User::talk);
 
             List<User> filteredList = users.stream().filter(user -> user.id>5)
                     .collect(Collectors.toList());
